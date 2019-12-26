@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/index.min.css" />
+    <link rel="stylesheet" href="../css/2d.min.css" />
+
+    <title>TRANSFORMATIONS</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="../index.html">Transformations</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#scale">scale</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#translate">translate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rotate">rotate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#shear">shear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#reflect">reflect</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Scaling -->
+      <section
+        class="fluid-container d-flex flex-column align-items-center"
+        id="scale"
+      >
+        <form class="form-inline">
+          <label class="sr-only" for="scale-x">Scale X</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="scale-x"
+            placeholder="Scale X"
+          />
+
+          <label class="sr-only" for="scale-y">Scale Y</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="scale-y"
+            placeholder="Scale Y"
+          />
+
+          <button
+            type="submit"
+            class="btn btn-dark mb-2"
+            id="scale-btn"
+            onclick="transform2D('scale')"
+          >
+            scale
+          </button>
+        </form>
+        <div id="scale-div" class="box"></div>
+      </section>
+
+      <!-- Translation -->
+      <section
+        class="fluid-container d-flex flex-column align-items-center"
+        id="translate"
+      >
+        <form class="form-inline">
+          <label class="sr-only" for="translate-x">Translate X</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="translate-x"
+            placeholder="Translate X"
+          />
+
+          <label class="sr-only" for="translate-y">Translate Y</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="translate-y"
+            placeholder="Translate Y"
+          />
+
+          <button
+            type="submit"
+            class="btn btn-dark mb-2"
+            id="translate-btn"
+            onclick="transform2D('translate')"
+          >
+            translate
+          </button>
+        </form>
+
+        <div id="translate-div" class="box"></div>
+      </section>
+
+      <section
+        class="fluid-container d-flex flex-column align-items-center"
+        id="rotate"
+      >
+        <form class="form-inline">
+          <label class="sr-only" for="scale-x">Name</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="scale-x"
+            placeholder="Scale X"
+          />
+
+          <label class="sr-only" for="scale-y">Name</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="scale-y"
+            placeholder="Scale Y"
+          />
+
+          <button type="submit" class="btn btn-dark mb-2">Submit</button>
+        </form>
+      </section>
+
+      <!-- Shear -->
+      <section
+        class="fluid-container d-flex flex-column align-items-center"
+        id="shear"
+      >
+        <form class="form-inline">
+          <label class="sr-only" for="skew-x">Shear X</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="skew-x"
+            placeholder="Shear X"
+          />
+
+          <label class="sr-only" for="skew-y">Shear Y</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="skew-y"
+            placeholder="Shear Y"
+          />
+
+          <button
+            type="submit"
+            class="btn btn-dark mb-2"
+            id="skew-btn"
+            onclick="transform2D('skew')"
+          >
+            Shear
+          </button>
+        </form>
+
+        <div id="skew-div" class="box"></div>
+      </section>
+
+      <section
+        class="fluid-container d-flex flex-column align-items-center"
+        id="reflect"
+      >
+        <form class="form-inline">
+          <label class="sr-only" for="scale-x">Name</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="scale-x"
+            placeholder="Scale X"
+          />
+
+          <label class="sr-only" for="scale-y">Name</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="scale-y"
+            placeholder="Scale Y"
+          />
+
+          <button type="submit" class="btn btn-dark mb-2">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../scripts/2d.js"></script>
+  </body>
+</html>
