@@ -191,25 +191,22 @@
         class="fluid-container d-flex flex-column align-items-center"
         id="reflect"
       >
-        <form class="form-inline">
-          <label class="sr-only" for="scale-x">Name</label>
-          <input
-            type="text"
-            class="form-control mb-2 mr-sm-2"
-            id="scale-x"
-            placeholder="Scale X"
-          />
-
-          <label class="sr-only" for="scale-y">Name</label>
-          <input
-            type="text"
-            class="form-control mb-2 mr-sm-2"
-            id="scale-y"
-            placeholder="Scale Y"
-          />
-
-          <button type="submit" class="btn btn-dark mb-2">Submit</button>
-        </form>
+        <div>
+          <button
+            class="btn btn-dark mb-2"
+            id="reflect-btn"
+            onclick="transform2D('reflect')"
+          >
+            Shear
+          </button>
+          <button
+            class="btn btn-dark mb-2"
+            id="reflect-btn"
+            onclick="transform2D('reflect')"
+          >
+            Shear
+          </button>
+        </div>
 
         <div id="reflect-div" class="box"></div>
       </section>
