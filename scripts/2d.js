@@ -18,3 +18,12 @@ const transform2D = transform => {
   else if (y) div.style.transform = `${transform}Y(${y})`;
   else div.style.transform = `unset`;
 };
+
+const rotate = () => {
+  console.log('>>>>>>>>>>>>>>', 'rotate');
+  let angle = document.getElementById('angle').value;
+  let div = document.getElementById('rotate-div');
+  div.style.transformOrigin = '0 100%';
+  if (angle) div.style.transform = `rotate(${angle})`;
+  else div.style.transform = `unset`;
+};

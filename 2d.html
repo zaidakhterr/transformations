@@ -13,8 +13,8 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/index.min.css" />
-    <link rel="stylesheet" href="../css/2d.min.css" />
+    <link rel="stylesheet" href="./css/index.min.css" />
+    <link rel="stylesheet" href="./css/2d.min.css" />
 
     <title>TRANSFORMATIONS</title>
   </head>
@@ -124,29 +124,31 @@
         <div id="translate-div" class="box"></div>
       </section>
 
+      <!-- Rotation -->
       <section
         class="fluid-container d-flex flex-column align-items-center"
         id="rotate"
       >
         <form class="form-inline">
-          <label class="sr-only" for="scale-x">Name</label>
+          <label class="sr-only" for="angle">Rotate angle</label>
           <input
             type="text"
             class="form-control mb-2 mr-sm-2"
-            id="scale-x"
-            placeholder="Scale X"
+            id="angle"
+            placeholder="Angle"
           />
 
-          <label class="sr-only" for="scale-y">Name</label>
-          <input
-            type="text"
-            class="form-control mb-2 mr-sm-2"
-            id="scale-y"
-            placeholder="Scale Y"
-          />
-
-          <button type="submit" class="btn btn-dark mb-2">Submit</button>
+          <button
+            type="submit"
+            class="btn btn-dark mb-2"
+            id="rotate-btn"
+            onclick="rotate()"
+          >
+            rotate
+          </button>
         </form>
+
+        <div id="rotate-div" class="box"></div>
       </section>
 
       <!-- Shear -->
@@ -184,6 +186,7 @@
         <div id="skew-div" class="box"></div>
       </section>
 
+      <!-- Reflect -->
       <section
         class="fluid-container d-flex flex-column align-items-center"
         id="reflect"
@@ -207,6 +210,8 @@
 
           <button type="submit" class="btn btn-dark mb-2">Submit</button>
         </form>
+
+        <div id="reflect-div" class="box"></div>
       </section>
     </main>
 
@@ -226,6 +231,7 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/2d.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/2d.js"></script>
   </body>
 </html>
