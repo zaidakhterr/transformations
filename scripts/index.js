@@ -10,4 +10,4 @@ prevent('scale');
 prevent('translate');
 prevent('skew');
 prevent('rotate');
-// prevent('reflect');
+prevent('reflect');

@@ -77,6 +77,14 @@
             placeholder="Scale Y"
           />
 
+          <label class="sr-only" for="scale-z">Scale Z</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="scale-z"
+            placeholder="Scale Z"
+          />
+
           <button
             type="submit"
             class="btn btn-dark mb-2"
@@ -138,12 +146,28 @@
         id="rotate"
       >
         <form class="form-inline">
-          <label class="sr-only" for="angle">Rotate angle</label>
+          <label class="sr-only" for="rotate-x">Rotate X</label>
           <input
             type="text"
             class="form-control mb-2 mr-sm-2"
-            id="angle"
-            placeholder="Angle"
+            id="rotate-x"
+            placeholder="Rotate X"
+          />
+
+          <label class="sr-only" for="rotate-y">Rotate Y</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="rotate-y"
+            placeholder="Rotate Y"
+          />
+
+          <label class="sr-only" for="rotate-z">Rotate Z</label>
+          <input
+            type="text"
+            class="form-control mb-2 mr-sm-2"
+            id="rotate-z"
+            placeholder="Rotate Z"
           />
 
           <button
@@ -157,66 +181,6 @@
         </form>
 
         <div id="rotate-div" class="box"></div>
-      </section>
-
-      <!-- Shear -->
-      <section
-        class="fluid-container d-flex flex-column align-items-center"
-        id="shear"
-      >
-        <form class="form-inline">
-          <label class="sr-only" for="skew-x">Shear X</label>
-          <input
-            type="text"
-            class="form-control mb-2 mr-sm-2"
-            id="skew-x"
-            placeholder="Shear X"
-          />
-
-          <label class="sr-only" for="skew-y">Shear Y</label>
-          <input
-            type="text"
-            class="form-control mb-2 mr-sm-2"
-            id="skew-y"
-            placeholder="Shear Y"
-          />
-
-          <button
-            type="submit"
-            class="btn btn-dark mb-2"
-            id="skew-btn"
-            onclick="transform2D('skew')"
-          >
-            Shear
-          </button>
-        </form>
-
-        <div id="skew-div" class="box"></div>
-      </section>
-
-      <!-- Reflect -->
-      <section
-        class="fluid-container d-flex flex-column align-items-center"
-        id="reflect"
-      >
-        <div>
-          <button
-            class="btn btn-dark mb-2"
-            id="reflect-btn"
-            onclick="transform2D('reflect')"
-          >
-            Shear
-          </button>
-          <button
-            class="btn btn-dark mb-2"
-            id="reflect-btn"
-            onclick="transform2D('reflect')"
-          >
-            Shear
-          </button>
-        </div>
-
-        <div id="reflect-div" class="box"></div>
       </section>
     </main>
 
@@ -236,7 +200,6 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/index.js"></script>
     <script src="./scripts/3d.js"></script>
   </body>
 </html>
