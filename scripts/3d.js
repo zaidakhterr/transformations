@@ -19,7 +19,7 @@ const display = () => {
   console.log(y);
   console.log(z);
   if (x && y && z) {
-    div.style.transform = `translate3d(${x},${y},${z})`;
+    div.style.transform = `perspective(800px) translate3d(${x},${y},${z})`;
   } else if (x && y) {
     div.style.transform = `translateX(${x}) translateY(${y})`;
   } else if (x) {
@@ -27,7 +27,7 @@ const display = () => {
   } else if (y) {
     div.style.transform = `translateY(${y})`;
   } else if (z) {
-    div.style.transform = `translateZ(${z})`;
+    div.style.transform = `perspective(800px) translateZ(${z})`;
   }
 };
 
@@ -64,7 +64,7 @@ const scale = () => {
   console.log(y);
   console.log(z);
   if (x && y && z) {
-    div.style.transform = `scale3d(${x},${y},${z})`;
+    div.style.transform = `perspective(800px) scale3d(${x},${y},${z})`;
   } else if (x && y) {
     div.style.transform = `scaleX(${x}) scaleY(${y})`;
   } else if (x) {
@@ -72,6 +72,6 @@ const scale = () => {
   } else if (y) {
     div.style.transform = `scaleY(${y})`;
   } else if (z) {
-    div.style.transform = ` scaleZ(${z})`;
+    div.style.transform = `perspective(800px) scaleZ(${z})`;
   }
 };
