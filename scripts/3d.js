@@ -28,6 +28,10 @@ const display = () => {
     div.style.transform = `translateY(${y})`;
   } else if (z) {
     div.style.transform = `perspective(800px) translateZ(${z})`;
+  } else if (x && z) {
+    div.style.transform = `translateX(${x}) translateZ(${z})`;
+  } else if (y && z) {
+    div.style.transform = `translateY(${y}) translateZ(${z})`;
   }
 };
 
@@ -40,17 +44,17 @@ const rotate = () => {
   //   console.log(angle);
   if (checkx.checked && checky.checked && checkz.checked === true) {
     div.style.transform = `rotate3d(1,1,1,${angle})`;
-  } else if (checkx.checked && checky.checked === true) {
+  } else if (checkx.checked && checky.checked) {
     div.style.transform = `rotate3d(1,1,0,${angle})`;
-  } else if (checkx.checked && checkz.checked === true) {
+  } else if (checkx.checked && checkz.checked) {
     div.style.transform = `rotate3d(1,0,1,${angle})`;
-  } else if (checkx.checked === true) {
+  } else if (checkx.checked) {
     div.style.transform = `rotate3d(1,0,0,${angle})`;
-  } else if (checky.checked && checkz.checked === true) {
+  } else if (checky.checked && checkz.checked) {
     div.style.transform = `rotate3d(0,1,1,${angle})`;
-  } else if (checky.checked === true) {
+  } else if (checky.checked) {
     div.style.transform = `rotate3d(0,1,0,${angle})`;
-  } else if (checkz.checked === true) {
+  } else if (checkz.checked) {
     div.style.transform = `rotate3d(0,0,1,${angle})`;
   }
 };
@@ -73,5 +77,9 @@ const scale = () => {
     div.style.transform = `scaleY(${y})`;
   } else if (z) {
     div.style.transform = `perspective(800px) scaleZ(${z})`;
+  } else if (x && z) {
+    div.style.transform = `scaleX(${x}) scaleZ(${z})`;
+  } else if (y && z) {
+    div.style.transform = `scaleY(${y}) scaleZ(${z})`;
   }
 };
