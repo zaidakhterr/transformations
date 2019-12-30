@@ -10,15 +10,15 @@ prevent('scale');
 prevent('translate');
 prevent('rotate');
 
-const translate = () => {
+const display = () => {
   let x = document.getElementById('translate-x').value;
   let y = document.getElementById('translate-y').value;
   let z = document.getElementById('translate-z').value;
   let div = document.getElementById('translate-div');
-  //   console.log(x);
-  //   console.log(y);
-  //   console.log(z);
   if (x && y && z) {
+    console.log(x);
+    console.log(y);
+    console.log(z);
     div.style.transform = `perspective(800px) translate3d(${x},${y},${z})`;
   } else if (x && y) {
     div.style.transform = `translateX(${x}) translateY(${y})`;
@@ -41,11 +41,7 @@ const rotate = () => {
   let x = document.getElementById('x-axis').value;
   let y = document.getElementById('y-axis').value;
   let z = document.getElementById('z-axis').value;
-  //   console.log(angle);
   if (x && y && z) {
-    console.log(x);
-    console.log(y);
-    console.log(z);
     div.style.transform = `rotate3d(${x},${y},${z},${angle})`;
   } else if (x && y) {
     div.style.transform = `rotate3d(${x},${y},0,${angle})`;
@@ -68,9 +64,7 @@ const scale = () => {
   let z = document.getElementById('scale-z').value;
   let div = document.getElementById('scale-div');
   if (x && y && z) {
-    console.log(z);
-    //temporary
-    div.style.perspectiveOrigin = 'bottom';
+    div.style.perspectiveOrigin = 'bottom left';
     div.style.transform = `perspective(800px) scale3d(${x},${y},${z})`;
   } else if (x && y) {
     div.style.transform = `scaleX(${x}) scaleY(${y})`;
@@ -83,6 +77,7 @@ const scale = () => {
   } else if (y) {
     div.style.transform = `scaleY(${y})`;
   } else if (z) {
+    console.log(z);
     div.style.transform = `perspective(800px) scaleZ(${z})`;
   }
 };
