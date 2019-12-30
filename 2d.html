@@ -33,8 +33,8 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse d-flex-md" id="navbarNav">
+        <ul class="navbar-nav flex-grow-1 d-flex-md justify-content-end">
           <li class="nav-item">
             <a class="nav-link" href="#scale">scale</a>
           </li>
@@ -86,7 +86,7 @@
             scale
           </button>
         </form>
-        <div id="scale-div" class="box"></div>
+        <div id="scale-div" class="box">SCALE</div>
       </section>
 
       <!-- Translation -->
@@ -121,7 +121,7 @@
           </button>
         </form>
 
-        <div id="translate-div" class="box"></div>
+        <div id="translate-div" class="box">TRANSLATE</div>
       </section>
 
       <!-- Rotation -->
@@ -148,7 +148,7 @@
           </button>
         </form>
 
-        <div id="rotate-div" class="box"></div>
+        <div id="rotate-div" class="box">ROTATE</div>
       </section>
 
       <!-- Shear -->
@@ -183,7 +183,7 @@
           </button>
         </form>
 
-        <div id="skew-div" class="box"></div>
+        <div id="skew-div" class="box">SHEAR</div>
       </section>
 
       <!-- Reflect -->
@@ -194,21 +194,28 @@
         <div>
           <button
             class="btn btn-dark mb-2"
-            id="reflect-btn"
-            onclick="transform2D('reflect')"
+            id="reflect-x-btn"
+            onclick="reflect('x')"
           >
-            Shear
+            Reflect X
           </button>
           <button
             class="btn btn-dark mb-2"
-            id="reflect-btn"
-            onclick="transform2D('reflect')"
+            id="reflect-y-btn"
+            onclick="reflect('y')"
           >
-            Shear
+            Reflect Y
+          </button>
+          <button
+            class="btn btn-dark mb-2"
+            id="reflect-reset-btn"
+            onclick="reflect('reset')"
+          >
+            Initial
           </button>
         </div>
 
-        <div id="reflect-div" class="box"></div>
+        <div id="reflect-div" class="box">REFLECT</div>
       </section>
     </main>
 

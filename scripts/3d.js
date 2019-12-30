@@ -29,9 +29,9 @@ const display = () => {
   } else if (z) {
     div.style.transform = `perspective(800px) translateZ(${z})`;
   } else if (x && z) {
-    div.style.transform = `translateX(${x}) translateZ(${z})`;
+    div.style.transform = `perspective(800px) translateX(${x}) translateZ(${z})`;
   } else if (y && z) {
-    div.style.transform = `translateY(${y}) translateZ(${z})`;
+    div.style.transform = `perspective(800px) translateY(${y}) translateZ(${z})`;
   }
 };
 
@@ -78,8 +78,8 @@ const scale = () => {
   } else if (z) {
     div.style.transform = `perspective(800px) scaleZ(${z})`;
   } else if (x && z) {
-    div.style.transform = `scaleX(${x}) scaleZ(${z})`;
+    div.style.transform = `perspective(800px) scaleX(${x}) scaleZ(${z})`;
   } else if (y && z) {
-    div.style.transform = `scaleY(${y}) scaleZ(${z})`;
+    div.style.transform = `perspective(800px) scaleY(${y}) scaleZ(${z})`;
   }
 };

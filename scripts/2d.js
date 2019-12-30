@@ -23,7 +23,18 @@ const rotate = () => {
   console.log('>>>>>>>>>>>>>>', 'rotate');
   let angle = document.getElementById('angle').value;
   let div = document.getElementById('rotate-div');
-  div.style.transformOrigin = '0 100%';
   if (angle) div.style.transform = `rotate(${angle})`;
   else div.style.transform = `unset`;
+};
+
+const reflect = axis => {
+  console.log('>>>>>>>>>>>>>>', 'reflect');
+  let div = document.getElementById('reflect-div');
+  if (axis === 'x') {
+    div.style.transformOrigin = '50% 100%';
+    div.style.transform = 'rotateX(-180deg)';
+  } else if (axis === 'y') {
+    div.style.transformOrigin = '0 50%';
+    div.style.transform = 'rotateY(180deg)';
+  } else div.style.transform = `unset`;
 };
