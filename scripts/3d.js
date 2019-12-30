@@ -42,7 +42,7 @@ const rotate = () => {
   let checky = document.getElementById('y-axis');
   let checkz = document.getElementById('z-axis');
   //   console.log(angle);
-  if (checkx.checked && checky.checked && checkz.checked === true) {
+  if (checkx.checked && checky.checked && checkz.checked) {
     div.style.transform = `rotate3d(1,1,1,${angle})`;
   } else if (checkx.checked && checky.checked) {
     div.style.transform = `rotate3d(1,1,0,${angle})`;
