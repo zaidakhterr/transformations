@@ -32,23 +32,26 @@ const display = () => {
 };
 
 const rotate = () => {
-  let x = document.getElementById('rotate-x').value;
-  let y = document.getElementById('rotate-y').value;
-  let z = document.getElementById('rotate-z').value;
+  let angle = document.getElementById('angle').value;
   let div = document.getElementById('rotate-div');
-  console.log(x);
-  console.log(y);
-  console.log(z);
-  if (x && y && z) {
-    div.style.transform = `rotate3d(${x},${y},${z})`;
-  } else if (x && y) {
-    div.style.transform = `rotateX(${x}) rotateY(${y})`;
-  } else if (x) {
-    div.style.transform = `rotateX(${x})`;
-  } else if (y) {
-    div.style.transform = `rotateY(${y})`;
-  } else if (z) {
-    div.style.transform = `rotateZ(${z})`;
+  let checkx = document.getElementById('x-axis');
+  let checky = document.getElementById('y-axis');
+  let checkz = document.getElementById('z-axis');
+  //   console.log(angle);
+  if (checkx.checked && checky.checked && checkz.checked === true) {
+    div.style.transform = `rotate3d(1,1,1,${angle})`;
+  } else if (checkx.checked && checky.checked === true) {
+    div.style.transform = `rotate3d(1,1,0,${angle})`;
+  } else if (checkx.checked && checkz.checked === true) {
+    div.style.transform = `rotate3d(1,0,1,${angle})`;
+  } else if (checkx.checked === true) {
+    div.style.transform = `rotate3d(1,0,0,${angle})`;
+  } else if (checky.checked && checkz.checked === true) {
+    div.style.transform = `rotate3d(0,1,1,${angle})`;
+  } else if (checky.checked === true) {
+    div.style.transform = `rotate3d(0,1,0,${angle})`;
+  } else if (checkz.checked === true) {
+    div.style.transform = `rotate3d(0,0,1,${angle})`;
   }
 };
 
@@ -69,6 +72,6 @@ const scale = () => {
   } else if (y) {
     div.style.transform = `scaleY(${y})`;
   } else if (z) {
-    div.style.transform = `scaleZ(${z})`;
+    div.style.transform = ` scaleZ(${z})`;
   }
 };

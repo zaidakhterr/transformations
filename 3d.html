@@ -89,7 +89,7 @@
             type="submit"
             class="btn btn-dark mb-2"
             id="scale-btn"
-            onclick="display()"
+            onclick="scale()"
           >
             scale
           </button>
@@ -146,28 +146,18 @@
         id="rotate"
       >
         <form class="form-inline">
-          <label class="sr-only" for="rotate-x">Rotate X</label>
+          <input type="checkbox" name="x-axis" value="x" id="x-axis" />
+          <label>Along x-axis</label>
+          <input type="checkbox" name="y-axis" value="y" id="y-axis" />
+          <label>Along y-axis</label>
+          <input type="checkbox" name="z-axis" value="z" id="z-axis" />
+          <label>Along z-axis</label>
+          <label class="sr-only" for="angle">Rotate angle</label>
           <input
             type="text"
             class="form-control mb-2 mr-sm-2"
-            id="rotate-x"
-            placeholder="Rotate X"
-          />
-
-          <label class="sr-only" for="rotate-y">Rotate Y</label>
-          <input
-            type="text"
-            class="form-control mb-2 mr-sm-2"
-            id="rotate-y"
-            placeholder="Rotate Y"
-          />
-
-          <label class="sr-only" for="rotate-z">Rotate Z</label>
-          <input
-            type="text"
-            class="form-control mb-2 mr-sm-2"
-            id="rotate-z"
-            placeholder="Rotate Z"
+            id="angle"
+            placeholder="Angle"
           />
 
           <button
@@ -179,7 +169,6 @@
             rotate
           </button>
         </form>
-
         <div id="rotate-div" class="box"></div>
       </section>
     </main>
