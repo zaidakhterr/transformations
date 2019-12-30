@@ -10,7 +10,7 @@ prevent('scale');
 prevent('translate');
 prevent('rotate');
 
-const display = () => {
+const translate = () => {
   let x = document.getElementById('translate-x').value;
   let y = document.getElementById('translate-y').value;
   let z = document.getElementById('translate-z').value;
@@ -67,13 +67,11 @@ const scale = () => {
   let y = document.getElementById('scale-y').value;
   let z = document.getElementById('scale-z').value;
   let div = document.getElementById('scale-div');
-  console.log(x);
-  console.log(y);
-  console.log(z);
   if (x && y && z) {
+    console.log(z);
     //temporary
-    div.style.perspectiveOrigin = 'top';
-    div.style.transform = `perspective(300px) scale3d(${x},${y},${z})`;
+    div.style.perspectiveOrigin = 'bottom';
+    div.style.transform = `perspective(800px) scale3d(${x},${y},${z})`;
   } else if (x && y) {
     div.style.transform = `scaleX(${x}) scaleY(${y})`;
   } else if (x && z) {
