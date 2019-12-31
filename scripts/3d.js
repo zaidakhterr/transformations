@@ -32,6 +32,8 @@ const display = () => {
     div.style.transform = `translateY(${y})`;
   } else if (z) {
     div.style.transform = `perspective(800px) translateZ(${z})`;
+  } else {
+    div.style.transform = 'unset';
   }
 };
 
@@ -55,6 +57,8 @@ const rotate = () => {
     div.style.transform = `rotate3d(0,${y},0,${angle})`;
   } else if (z) {
     div.style.transform = `rotate3d(0,0,${z},${angle})`;
+  } else {
+    div.style.transform = 'unset';
   }
 };
 
@@ -65,7 +69,7 @@ const scale = () => {
   let div = document.getElementById('scale-div');
   if (x && y && z) {
     div.style.perspectiveOrigin = 'bottom left';
-    div.style.transform = `perspective(800px) scale3d(${x},${y},${z})`;
+    div.style.transform = `perspective(900px) scale3d(${x},${y},${z})`;
   } else if (x && y) {
     div.style.transform = `scaleX(${x}) scaleY(${y})`;
   } else if (x && z) {
@@ -79,5 +83,7 @@ const scale = () => {
   } else if (z) {
     console.log(z);
     div.style.transform = `perspective(800px) scaleZ(${z})`;
+  } else {
+    div.style.transform = 'unset';
   }
 };
