@@ -139,15 +139,40 @@
         class="fluid-container d-flex flex-column align-items-center"
         id="rotate"
       >
-        <form class="form-inline">
-          <!-- <input type="checkbox" name="x-axis" value="x" id="x-axis" />
-          <label>Along x-axis</label>
-          <input type="checkbox" name="y-axis" value="y" id="y-axis" />
-          <label>Along y-axis</label>
-          <input type="checkbox" name="z-axis" value="z" id="z-axis" />
-          <label>Along z-axis</label>
-          <label class="sr-only" for="angle">Rotate angle</label> -->
-          <input
+        <form class="form-inline d-flex flex-column align-items-start">
+          <div class="form-group mb-2">
+            <input
+              class="ml-4 mr-2"
+              type="checkbox"
+              name="x-axis"
+              value="x"
+              id="x-axis"
+            />
+            <label> Along x-axis</label>
+          </div>
+          <div class="form-group mb-2">
+            <input
+              class="ml-4 mr-2"
+              type="checkbox"
+              name="y-axis"
+              value="y"
+              id="y-axis"
+            />
+            <label> Along y-axis</label>
+          </div>
+          <div class="form-group mb-2">
+            <input
+              class="ml-4 mr-2"
+              type="checkbox"
+              name="z-axis"
+              value="z"
+              id="z-axis"
+            />
+            <label> Along z-axis</label>
+          </div>
+
+          <!-- <label class="sr-only" for="angle">Rotate angle</label> -->
+          <!-- <input
             type="text"
             class="form-control mb-2 mr-sm-2"
             id="x-axis"
@@ -164,22 +189,24 @@
             class="form-control mb-2 mr-sm-2"
             id="z-axis"
             placeholder=" Z-axis"
-          />
-          <input
-            type="text"
-            class="form-control mb-2 mr-sm-2"
-            id="angle"
-            placeholder="Angle"
-          />
+          /> -->
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mb-2 mr-sm-2"
+              id="angle"
+              placeholder="Angle"
+            />
 
-          <button
-            type="submit"
-            class="btn btn-dark mb-2"
-            id="rotate-btn"
-            onclick="rotate()"
-          >
-            rotate
-          </button>
+            <button
+              type="submit"
+              class="btn btn-dark mb-2"
+              id="rotate-btn"
+              onclick="rotate()"
+            >
+              rotate
+            </button>
+          </div>
         </form>
         <div id="rotate-div" class="box">ROTATE</div>
       </section>
@@ -202,5 +229,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./scripts/3d.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

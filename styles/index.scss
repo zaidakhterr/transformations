@@ -17,6 +17,18 @@ button {
 
 a {
   text-transform: capitalize;
+
+  &:hover {
+    text-decoration: none;
+    border: none;
+  }
+}
+
+ul {
+  list-style: none;
+  li {
+    list-style: none;
+  }
 }
 
 form {
